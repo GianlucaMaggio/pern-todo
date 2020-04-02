@@ -27,9 +27,8 @@ const EditTodo = ( { todo }) => {
     }
 
     return (<Fragment>
-                <button type="button" class="btn btn-warning" data-toggle="modal" data-target={`#id${todo.todo_id}`}>
-                Edit
-                </button>
+                
+                <span data-toggle="modal" data-target={`#id${todo.todo_id}`} class="flat-button fa fa-edit text-info"></span>
 
                 <div class="modal" id={`id${todo.todo_id}`}>
                 <div class="modal-dialog">
@@ -45,7 +44,7 @@ const EditTodo = ( { todo }) => {
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal" onClick={e => updateDescription(e)}>Edit</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal" onClick={e => updateDescription(e)}>Edit</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
 
